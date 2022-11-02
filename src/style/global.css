@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin:0;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1em;
+    background-color: #0e5fb5;
+    font-family: 'Roboto', 'Arial', 'Tahoma';
+}
+
+header{
+    width: 100%;
+    min-height: 4em;
+    display: flex;
+    align-items: center;
+    background-color: #2f84df;
+    padding: .5em;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.25em;
+    padding: .5em;
+}
+
+footer{
+    width: 100%;
+    min-height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    background-color: #1c222b;
+    padding: .5em;
+}
+
+footer a{
+    color:#fff;
+}
+
+.title{
+    color:#fff;
+    margin:.25em;
+}
+
+.pokedex{
+    max-width: 800px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    gap:1em;
+    position: relative;
+    padding:1em;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 4px;
+    margin:auto;
+    overflow: hidden;
+}
+
+.pokedex.loading:after{
+    content: 'Carregando...';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffbb;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 1;
+}
+
+.pokedex .pokemon{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.25em;
+    padding:.5em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px #00000010;
+    border-radius: 6px;
+}
+
+.pokedex .pokemon .img{
+    width: 75px;
+}
+
+.pokedex .pokemon .name{
+    color:rgb(53, 52, 56);
+    text-transform: capitalize;
+    margin:.25em;
+}
+
+.load-more{
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Roboto', 'Arial', 'Tahoma';
+    font-weight: 600;
+    color:rgb(22, 20, 20);
+    background-color: #d7e8fa;
+    border-radius: 6px;
+    padding: .5em;
+    border: none;
+    outline:none;
+}
+
+.load-more.loading{
+    display: none;
+}
